@@ -1,0 +1,12 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Claim {
+  id: Int!
+  stage: String!
+}
+
+type Query {
+  claim(claim_id: Int!): Claim!
+}
