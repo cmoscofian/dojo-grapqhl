@@ -37,3 +37,6 @@ _cgo_export.*
 # Common IDE folders
 .idea
 .vscode
+
+# OSX Files
+*.DS_Store
