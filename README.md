@@ -46,7 +46,7 @@ We are using a lib that auto-generates models and resolvers needed for the graph
 Steps:
 1) Update `schema.graphqls` with new schemas.
 2) If you need a new auto generated resolver for a nested model, add it into `gqlgen.yml`.
-3) Run `go run github.com/99designs/gqlen generate` to auto generate models and resolvers.
+3) Run `go run github.com/99designs/gqlgen generate` to auto generate models and resolvers.
 4) Update the resolvers implementations if necessary.
 
 You can get more info about how it works [here](https://github.com/99designs/gqlgen#gqlgen---).
