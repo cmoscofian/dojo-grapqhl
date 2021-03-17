@@ -8,7 +8,7 @@ import (
 	"github.com/mercadolibre/fury_post-compra-dojo-graphql/cmd/api/graph/model"
 )
 
-const baseUrl string = "http://api.internal.ml.com"
+const baseUrl string = "http://internal-api.mercadolibre.com"
 
 func GetClaim(claimID int) (*model.Claim, error) {
 	var claim model.Claim
