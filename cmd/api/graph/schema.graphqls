@@ -4,9 +4,49 @@
 
 type Claim {
   id: Int!
+  type: String!
   stage: String!
+  status: String!
+  client_id: Int!
+  resource_id: Int!
+  resource: String!
+  reason_id: String!
+  fulfilled: Boolean!
+  order: Order!
+}
+
+type Shipment {
+  id: Int!
+  mode: String!
+  status: String!
+  substatus: String
+}
+
+type Order {
+  id: Int!
+  shipping: OrderShipping
+  shipment: Shipment
+  order_items: [OrderItem]
+}
+
+type OrderItem {
+  item: Item!
+  quantity: Float!
+  unit_price: Float!
+  currency_id: String!
+}
+
+type Item {
+  id: String!
+  title: String!
+  category_id: String!
 }
 
 type Query {
   claim(claim_id: Int!): Claim!
+  order(order_id: Int!): Order!
+}
+
+type OrderShipping {
+  id: Int!
 }

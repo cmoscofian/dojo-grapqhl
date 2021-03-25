@@ -16,6 +16,18 @@ func GetClaim(claimID int) (*model.Claim, error) {
 	return &claim, err
 }
 
+func GetOrder(orderID int) (*model.Order, error) {
+	var order model.Order
+	err := Get(fmt.Sprintf("/internal/orders/%d", orderID), &order)
+	return &order, err
+}
+
+func GetShipment(shipmentId int) (*model.Shipment, error) {
+	var shipment model.Shipment
+	err := Get(fmt.Sprintf("/shipments/%d", shipmentId), &shipment)
+	return &shipment, err
+}
+
 func Get(uri string, ref interface{}) error {
 	url := baseUrl + uri
 	req, err := http.NewRequest("GET", url, nil)

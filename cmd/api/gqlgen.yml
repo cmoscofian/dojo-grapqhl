@@ -54,7 +54,11 @@ models:
       - github.com/99designs/gqlgen/graphql.Int
       - github.com/99designs/gqlgen/graphql.Int64
       - github.com/99designs/gqlgen/graphql.Int32
-#   Claim:
-#       fields:
-#         order:
-#           resolver: true # force a resolver to be generated
+  Claim:
+    fields:
+      order:
+        resolver: true
+  Order:
+    fields:
+      shipment:
+        resolver: true
